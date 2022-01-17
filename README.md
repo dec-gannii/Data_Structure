@@ -48,7 +48,7 @@ Data_Structure Code Review
     - 자료구조를 사용하여 처리한 데이터를 표현하고 저장
     - 주어진 문제를 처리하는 절차 → 알고리즘
     
-    ![Untitled](%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%202a786c065fd243ae81180e42824975f7/Untitled%201.png)
+    ![Untitled](README_IMAGE/Untitled%201.png)
     
 - 알고리즘의 조건
     
@@ -246,7 +246,7 @@ Data_Structure Code Review
     
     char s[12] = “game over”;
     
-    ![문자열 s에 대한 메모리 구조](%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%202a786c065fd243ae81180e42824975f7/Untitled%202.png)
+    ![문자열 s에 대한 메모리 구조](README_IMAGE/Untitled%202.png)
     
     문자열 s에 대한 메모리 구조
     
@@ -294,7 +294,7 @@ Data_Structure Code Review
 
 ## 함수 파라미터로서의 배열
 
-![Untitled](%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%202a786c065fd243ae81180e42824975f7/Untitled%203.png)
+![Untitled](README_IMAGE/Untitled%203.png)
 
 <aside>
 💡 **함수 내에서 파라미터로 배열을 받아 배열의 내용을 수정하면 원래의 배열이 수정된다.**
@@ -323,7 +323,7 @@ Data_Structure Code Review
 
 ## 클래스의 선언
 
-![Untitled](%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%202a786c065fd243ae81180e42824975f7/Untitled%204.png)
+![Untitled](README_IMAGEUntitled%204.png)
 
 class의 선언은 class 또는 struct 예약어를 사용해서 선언
 
