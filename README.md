@@ -323,7 +323,7 @@ Data_Structure Code Review
 
 ## 클래스의 선언
 
-![Untitled](README_IMAGEUntitled%204.png)
+![Untitled](README_IMAGE/Untitled%204.png)
 
 class의 선언은 class 또는 struct 예약어를 사용해서 선언
 
