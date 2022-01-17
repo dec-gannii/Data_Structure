@@ -15,7 +15,7 @@ Data_Structure Code Review
 
 ---
 
-![자료구조의 구성](%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%202a786c065fd243ae81180e42824975f7/Untitled.png)
+![자료구조의 구성](README_IMAGE/Untitled.png)
 
 자료구조의 구성
 
