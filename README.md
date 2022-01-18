@@ -1,7 +1,3 @@
-# Data_Structure
-
-Data_Structure Code Review
-
 # 자료구조
 
 ## 2022.01.17 월요일
@@ -346,3 +342,139 @@ class의 선언은 class 또는 struct 예약어를 사용해서 선언
 오버라이딩한 멤버 함수의 **매개변수 타입, 개수와 반환형이 부모 클래스의 멤버 함수와 동일해야 한다**는 특징
 
 ---
+
+## 2022.01.18 화요일
+
+# 3️⃣ 스택 (Stack)
+
+## 스택(stack)이란?
+
+> 가장 간단한 형태의 자료구조 중 하나로 자료의 입출력이 후입선출(LIFO; Last-In-First-Out) 형태로 일어나는 자료구조
+> 
+
+---
+
+![Untitled](README_IMAGE/Untitled%205.png)
+
+- 구조
+    - 가장 먼저 입력된 데이터가 맨 아래에 쌓이고 가장 최근에 입력된 데이터가 가장 위에 쌓이는 구조
+    - 입출력
+        - 스택의 맨 위에서만 일어나고, 스택의 중간에서는 데이터의 삽입 또는 삭제 불가
+    - 명칭
+        - 스택 상단 : 스택에서 입출력이 이루어지는 부분
+        - 스택 하단 : 스택 상단의 반대 부분으로 스택의 바닥 부분
+        - 요소 (항목) : 스택에 저장되는 것
+        - 공백(empty) 상태 : 스택에 요소가 하나도 없는 상태
+        - 포화(full) 상태 : 스택이 꽉  차서 더 이상 요소를 넣을 수 없는 상태
+
+---
+
+## 배열의 추상 자료형
+
+**데이터**
+
+후입선출(LIFO)의 접근 방법을 유지하는 요소들의 모음
+
+**연산** 
+
+1. **push(x)** : 주어진 요소 x를 스택의 맨 위에 추가한다. (삽입)
+2. **pop()** : 스택이 비어있지 않다면 맨 위의 요소를 삭제하고 반환한다. (삭제)
+3. isEmpty() : 스택이 비어있으면 true를, 비어있지 않으면 false를 반환한다. (공백검사)
+4. peek() :  스택이 비어있지 않으면 맨 위의 요소를 삭제하지 않고 반환한다. (최상위검사)
+5. isFull() : 스택이 꽉 차 있으면 true를, 꽉 차 있지 않으면 false를 반환한다. (포화검사)
+6. size() : 스택 내의 모든 요소들의 개수를 반환한다. (원소의 수 검사)
+7. display() : 스택 내의 모든 요소들을 출력한다. (출력)
+
+사용 예시
+
+<aside>
+💡 주로 자료의 출력 순서가 입력 순서의 역순으로 이루어져야 하는 경우 자주 사용
+
+</aside>
+
+1. 문서, 그림, 수식 등의 편집기(Editor)에서 되돌리기(undo) 기능 구현 시 사용
+2. 함수 호출 시 복귀 주소를 기억할 때 사용
+    
+    (예시)
+    
+    ![Untitled](README_IMAGE/Untitled%206.png)
+    
+3. 소스코드, 문서 등에서 괄호 닫기가 정상적으로 이루어졌는지 검사할 때 사용
+
+---
+
+- 구현
+    - 배열을 이용하는 스택의 표현 (예시 : 정수를 저장할 수 있는 스택)
+        - 정수의 1차원 배열이 필요 ⇒ data[MAX_STACK_SIZE]라고 정의
+            - MAX_STACK_SIZE는 스택에 저장 가능한 요소 개수의 최대
+        - 스택의 구조상 삽입과 삭제 연산을 위한 변수인 top 필요
+            - top 변수는 스택에서 가장 최근에 입력된 자료의 위치를 나타냄
+        - 구조 그림
+            
+            ![Untitled](README_IMAGE/Untitled%207.png)
+            
+        - 스택이 처음 생성되면 top은 공백 상태를 의미하는 -1로 초기화되고, 새로운 요소가 push() 연산을 통해 추가되면 top+1의 위치인 data[0]에 저장
+        - 공백상태 / 포화상태
+            
+            ![Untitled](README_IMAGE/Untitled%208.png)
+            
+        - 삽입(push)연산
+            
+            ![Untitled](README_IMAGE/Untitled%209.png)
+            
+        - 삭제(pop)연산
+            
+            ![Untitled](README_IMAGE/Untitled%2010.png)
+            
+    - 배열을 이용하는 스택의 구현
+        
+        [Data_Structure/Stack/ArrayStack at main · dec-gannii/Data_Structure](https://github.com/dec-gannii/Data_Structure/tree/main/Stack/ArrayStack)
+        
+        정수를 저장할 수 있는 1차원 배열을 이용한 스택 예제
+        
+        [Data_Structure/Stack/StudentStack at main · dec-gannii/Data_Structure](https://github.com/dec-gannii/Data_Structure/tree/main/Stack/StudentStack)
+        
+        1차원 배열을 이용한 스택을 응용한 학생 클래스 객체를 저장 가능한 스택 예제
+        
+    - 연결 리스트를 이용한 스택
+        - 배열을 이용한 스택의 단점
+            - 스택의 크기가 코드에서의 MAX_STACK_SIZE라는 제한이 존재
+        - ⇒ 연결 리스트 사용을 통해 해결
+            
+            ![Untitled](README_IMAGE/Untitled%2011.png)
+            
+- 스택의 응용
+    
+    <aside>
+    💡 **괄호 검사**
+    
+    </aside>
+    
+    **✔️ 괄호 검사의 조건**
+    
+    1. 왼쪽 괄호의 개수와 오른쪽 괄호의 개수가 같아야 한다.
+    2. 같은 타입의 괄호에서 왼쪽 괄호는 오른쪽 괄호보다 먼저 나와야 한다.
+    3. 서로 다른 타입의 왼쪽 괄호와 오른쪽 괄호쌍은 서로를 교차하면 안된다.
+    
+    ---
+    
+    > **괄호 검사 알고리즘**
+    > 
+    > 1. 문자열에 있는 괄호들을 차례로 조사한다.
+    > 2. 왼쪽 괄호를 만나면 스택에 삽입, 오른쪽 괄호를 만나면 스택 맨 위의 괄호를 꺼내 오른쪽 괄호와 짝이 맞는지 검사
+    > 3. 이 때 스택이 비어있다면 조건 1 또는 2를 위배, 짝이 맞지 않으면 조건 3을 위배
+    > 4. 마지막 괄호까지 모두 조사한 후에도 스택에 괄호가 남아있다면 조건 1에 위배
+    
+    예제 
+    
+    [Data_Structure/Stack/BracketMatchingCheck at main · dec-gannii/Data_Structure](https://github.com/dec-gannii/Data_Structure/tree/main/Stack/BracketMatchingCheck)
+    
+    <aside>
+    💡 **수식 계산**
+    
+    </aside>
+    
+    <aside>
+    💡 **미로 탐색 문제**
+    
+    </aside>
