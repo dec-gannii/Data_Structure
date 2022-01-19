@@ -397,7 +397,7 @@ class의 선언은 class 또는 struct 예약어를 사용해서 선언
     
     (예시)
     
-    ![Untitled](README_IMAGE/Untitled%206.png)
+    ![Untitled](README_IMAGE.png)
     
 3. 소스코드, 문서 등에서 괄호 닫기가 정상적으로 이루어졌는지 검사할 때 사용
 
@@ -474,7 +474,30 @@ class의 선언은 class 또는 struct 예약어를 사용해서 선언
     
     </aside>
     
-    <aside>
-    💡 **미로 탐색 문제**
+    ✔️ 연산자 위치에 따른 분류
     
-    </aside>
+    1. 전위(prefix)표기법 : 연산자를 피연산자 앞에 표기
+        1. ( 예시 ) +AB, +5*AB
+    2. 중위(infix)표기법 : 연산자를 피연산자 사이에 표기
+        1. ( 예시 ) A+B, 5+A*B
+    3. **후위(postfix)표기법** : 연산자를 피연산자 뒤에 표기
+        1. ( 예시 ) AB+, 5AB*+
+        2. 컴파일러가 주로 사용하는 방법
+        3. 장점
+            1. 괄호 사용 없이도 계산 순서 확인 가능
+            2. 연산자의 우선순위를 고려할 필요 X (식 자체에 우선순위가 이미 포함되어 있음)
+            3. 수식을 읽으면서 바로 계산 가능
+    
+    > 후위 표기 수식의 계산
+    > 
+    > 
+    > ![Untitled](README_IMAGE/Untitled%2012.png)
+    > 
+    > 주의사항
+    > 
+    > - 두 번 pop을 할 때 먼저 pop되는 것이 두번째 피연산자에 해당
+    > - 연산한 값은 다시 push
+    
+    [Data_Structure/Stack/EvalPostfixMain at main · dec-gannii/Data_Structure](https://github.com/dec-gannii/Data_Structure/tree/main/Stack/EvalPostfixMain)
+    
+    [Data_Structure/Stack/Infix2Postfix at main · dec-gannii/Data_Structure](https://github.com/dec-gannii/Data_Structure/tree/main/Stack/Infix2Postfix)
